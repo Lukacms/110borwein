@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+
+
+from src.parse_args import parse_args, Arguments
+from src.midpoint.midpoint import midpoint
+from src.trapezoidal.trapezoidal import trapezoidal
+from src.simpson.simpson import simpson
+from src.print_results import print_result
+
+def main() -> int:
+    args: Arguments = parse_args()
+    r_midpoint: float = midpoint(args.n)
+    r_trapezoidal: float = trapezoidal(args.n)
+    r_simpson: float = simpson(r_midpoint, r_trapezoidal)
+
+    print_result(r_midpoint, r_trapezoidal, r_simpson, args.n)
+    return 0
+
+
+if __name__ == "__main__":
+    exit(main())
