@@ -25,3 +25,7 @@ git clone git@github.com:Lukacms/110borwein.git 110borwein
 ```
 ./110borwein n
 ```
+
+## To modify the project
+* This project is finished since `01/05/2022`
+* But feel free to add anything if something isn't working !
